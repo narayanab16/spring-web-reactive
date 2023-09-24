@@ -41,8 +41,8 @@ public class ReactiveClient {
         WebClient webClient =
                 WebClient.builder().baseUrl("http://localhost:10000").build();
         ReactiveClient client = new ReactiveClient(webClient);
-        Mono<User> narayana = client.createUser(new User(100, "Narayana"));
-        Mono<User> basetty = client.createUser(new User(200, "Basetty"));
+        Mono<User> narayana = client.createUser(new User(1000, "Narayana"));
+        Mono<User> basetty = client.createUser(new User(2000, "Basetty"));
         System.out.println(" User  Created : " + narayana.block());
         System.out.println(" User  Created : " + basetty.block());
         Mono<User> user = client.getUser(1);// not exists but lets check
