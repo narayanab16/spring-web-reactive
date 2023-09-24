@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: "SpringBootReactive"
+server:
+  servlet:
+    context-path: /webreactive
+  port: 10000
